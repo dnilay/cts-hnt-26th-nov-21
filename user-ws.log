@@ -1,0 +1,514 @@
+2021-11-26 10:39:15.376  INFO 814 --- [restartedMain] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 814 (/home/nilay/IdeaProjects/user-service/target/classes started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:39:15.377  INFO 814 --- [restartedMain] com.example.demo.UserServiceApplication  : No active profile set, falling back to default profiles: default
+2021-11-26 10:39:15.597  INFO 814 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-26 10:39:15.597  INFO 814 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-26 10:39:16.638  WARN 814 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2021-11-26 10:39:16.665  INFO 814 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:39:16.745 ERROR 814 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:111) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.13.jar:5.3.13]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.0.jar:2.6.0]
+	at com.example.demo.UserServiceApplication.main(UserServiceApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.0.jar:2.6.0]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:226) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600) ~[spring-context-5.3.13.jar:5.3.13]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:121) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:228) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:123) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:81) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$ExposureFilter.<init>(OnAvailableEndpointCondition.java:183) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$ExposureFilter.<init>(OnAvailableEndpointCondition.java:177) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposureFilters(OnAvailableEndpointCondition.java:169) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:120) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:74) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.0.jar:2.6.0]
+	... 27 common frames omitted
+
+2021-11-26 10:41:01.996  INFO 925 --- [restartedMain] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 925 (/home/nilay/IdeaProjects/user-service/target/classes started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:41:02.001  INFO 925 --- [restartedMain] com.example.demo.UserServiceApplication  : No active profile set, falling back to default profiles: default
+2021-11-26 10:41:02.084  INFO 925 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-26 10:41:02.086  INFO 925 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-26 10:41:02.717  WARN 925 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2021-11-26 10:41:02.727  INFO 925 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:41:02.757 ERROR 925 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:111) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.13.jar:5.3.13]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.0.jar:2.6.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.0.jar:2.6.0]
+	at com.example.demo.UserServiceApplication.main(UserServiceApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.0.jar:2.6.0]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:226) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600) ~[spring-context-5.3.13.jar:5.3.13]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:121) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:228) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:123) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:81) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$ExposureFilter.<init>(OnAvailableEndpointCondition.java:183) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$ExposureFilter.<init>(OnAvailableEndpointCondition.java:177) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposureFilters(OnAvailableEndpointCondition.java:169) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:120) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:74) ~[spring-boot-actuator-autoconfigure-2.6.0.jar:2.6.0]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.0.jar:2.6.0]
+	... 27 common frames omitted
+
+2021-11-26 10:43:51.857  INFO 1120 --- [restartedMain] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 1120 (/home/nilay/IdeaProjects/user-service/target/classes started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:43:51.862  INFO 1120 --- [restartedMain] com.example.demo.UserServiceApplication  : No active profile set, falling back to default profiles: default
+2021-11-26 10:43:51.984  INFO 1120 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-26 10:43:51.986  INFO 1120 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-26 10:43:52.550  WARN 1120 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2021-11-26 10:43:52.561  INFO 1120 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:43:52.584 ERROR 1120 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:111) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.9.jar:5.3.9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.4.jar:2.5.4]
+	at com.example.demo.UserServiceApplication.main(UserServiceApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.4.jar:2.5.4]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:226) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600) ~[spring-context-5.3.9.jar:5.3.9]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:121) ~[spring-core-5.3.9.jar:5.3.9]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:219) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:89) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:78) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$Exposure.<init>(OnAvailableEndpointCondition.java:96) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposures(OnAvailableEndpointCondition.java:82) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:64) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.5.4.jar:2.5.4]
+	... 27 common frames omitted
+
+2021-11-26 10:44:18.210  INFO 1262 --- [restartedMain] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 1262 (/home/nilay/IdeaProjects/user-service/target/classes started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:44:18.213  INFO 1262 --- [restartedMain] com.example.demo.UserServiceApplication  : No active profile set, falling back to default profiles: default
+2021-11-26 10:44:18.283  INFO 1262 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-26 10:44:18.284  INFO 1262 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-26 10:44:18.725  WARN 1262 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2021-11-26 10:44:18.737  INFO 1262 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:44:18.763 ERROR 1262 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:111) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.9.jar:5.3.9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.4.jar:2.5.4]
+	at com.example.demo.UserServiceApplication.main(UserServiceApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.4.jar:2.5.4]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:226) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600) ~[spring-context-5.3.9.jar:5.3.9]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:121) ~[spring-core-5.3.9.jar:5.3.9]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:219) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:89) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:78) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$Exposure.<init>(OnAvailableEndpointCondition.java:96) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposures(OnAvailableEndpointCondition.java:82) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:64) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.5.4.jar:2.5.4]
+	... 27 common frames omitted
+
+2021-11-26 10:45:15.988  INFO 1387 --- [restartedMain] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 1387 (/home/nilay/IdeaProjects/user-service/target/classes started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:45:15.990  INFO 1387 --- [restartedMain] com.example.demo.UserServiceApplication  : No active profile set, falling back to default profiles: default
+2021-11-26 10:45:16.064  INFO 1387 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-26 10:45:16.083  INFO 1387 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-26 10:45:16.511  WARN 1387 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2021-11-26 10:45:16.521  INFO 1387 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:45:16.553 ERROR 1387 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:111) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.9.jar:5.3.9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.4.jar:2.5.4]
+	at com.example.demo.UserServiceApplication.main(UserServiceApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.4.jar:2.5.4]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:226) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600) ~[spring-context-5.3.9.jar:5.3.9]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:121) ~[spring-core-5.3.9.jar:5.3.9]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:219) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:89) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:78) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$Exposure.<init>(OnAvailableEndpointCondition.java:96) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposures(OnAvailableEndpointCondition.java:82) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:64) ~[spring-boot-actuator-autoconfigure-2.5.4.jar:2.5.4]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.5.4.jar:2.5.4]
+	... 27 common frames omitted
+
+2021-11-26 10:46:44.424  INFO 1499 --- [restartedMain] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 1499 (/home/nilay/IdeaProjects/user-service/target/classes started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:46:44.426  INFO 1499 --- [restartedMain] com.example.demo.UserServiceApplication  : No active profile set, falling back to default profiles: default
+2021-11-26 10:46:44.595  INFO 1499 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-26 10:46:44.597  INFO 1499 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-26 10:46:45.154  WARN 1499 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2021-11-26 10:46:45.164  INFO 1499 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:46:45.191 ERROR 1499 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:111) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.13.jar:5.3.13]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.7.jar:2.5.7]
+	at com.example.demo.UserServiceApplication.main(UserServiceApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.7.jar:2.5.7]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:226) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600) ~[spring-context-5.3.13.jar:5.3.13]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:121) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:219) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:89) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:78) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$Exposure.<init>(OnAvailableEndpointCondition.java:96) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposures(OnAvailableEndpointCondition.java:82) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:64) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.5.7.jar:2.5.7]
+	... 27 common frames omitted
+
+2021-11-26 10:49:03.638  INFO 1623 --- [restartedMain] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 1623 (/home/nilay/IdeaProjects/user-service/target/classes started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:49:03.647  INFO 1623 --- [restartedMain] com.example.demo.UserServiceApplication  : No active profile set, falling back to default profiles: default
+2021-11-26 10:49:03.771  INFO 1623 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-26 10:49:03.772  INFO 1623 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-26 10:49:04.406  WARN 1623 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2021-11-26 10:49:04.439  INFO 1623 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:49:04.480 ERROR 1623 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:111) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.13.jar:5.3.13]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.7.jar:2.5.7]
+	at com.example.demo.UserServiceApplication.main(UserServiceApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.7.jar:2.5.7]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:226) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600) ~[spring-context-5.3.13.jar:5.3.13]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:121) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:219) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:89) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:78) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$Exposure.<init>(OnAvailableEndpointCondition.java:96) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposures(OnAvailableEndpointCondition.java:82) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:64) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.5.7.jar:2.5.7]
+	... 27 common frames omitted
+
+2021-11-26 10:49:37.263  INFO 1723 --- [restartedMain] com.example.demo.UserServiceApplication  : Starting UserServiceApplication using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 1723 (/home/nilay/IdeaProjects/user-service/target/classes started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:49:37.265  INFO 1723 --- [restartedMain] com.example.demo.UserServiceApplication  : No active profile set, falling back to default profiles: default
+2021-11-26 10:49:37.364  INFO 1723 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-26 10:49:37.365  INFO 1723 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-26 10:49:37.870  WARN 1723 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2021-11-26 10:49:37.881  INFO 1723 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-26 10:49:37.904 ERROR 1723 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.demo.UserServiceApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:111) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.13.jar:5.3.13]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-2.5.7.jar:2.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.7.jar:2.5.7]
+	at com.example.demo.UserServiceApplication.main(UserServiceApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.7.jar:2.5.7]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:226) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:600) ~[spring-context-5.3.13.jar:5.3.13]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:121) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:219) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:89) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:78) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$Exposure.<init>(OnAvailableEndpointCondition.java:96) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposures(OnAvailableEndpointCondition.java:82) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:64) ~[spring-boot-actuator-autoconfigure-2.5.7.jar:2.5.7]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.5.7.jar:2.5.7]
+	... 27 common frames omitted
+
+2021-11-26 10:50:16.661  INFO 1851 --- [main] c.e.demo.UserServiceApplicationTests     : Starting UserServiceApplicationTests using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 1851 (started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:50:16.667  INFO 1851 --- [main] c.e.demo.UserServiceApplicationTests     : No active profile set, falling back to default profiles: default
+2021-11-26 10:50:18.158  INFO 1851 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-26 10:50:18.222  INFO 1851 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+2021-11-26 10:50:19.111  INFO 1851 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-26 10:50:19.435  INFO 1851 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-26 10:50:19.544  INFO 1851 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-26 10:50:19.630  INFO 1851 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-26 10:50:19.856  INFO 1851 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-26 10:50:20.051  INFO 1851 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-11-26 10:50:20.896  INFO 1851 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-26 10:50:20.908  INFO 1851 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-26 10:50:21.796  WARN 1851 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-26 10:50:22.366  INFO 1851 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2021-11-26 10:50:22.962  INFO 1851 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-11-26 10:50:23.044  INFO 1851 --- [main] c.e.demo.UserServiceApplicationTests     : Started UserServiceApplicationTests in 6.873 seconds (JVM running for 8.643)
+2021-11-26 10:50:23.377  INFO 1851 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-26 10:50:23.379  INFO 1851 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-11-26 10:50:23.404  INFO 1851 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-26 10:50:23.420  INFO 1851 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-26 10:58:35.963  INFO 1966 --- [main] c.e.demo.UserServiceApplicationTests     : Starting UserServiceApplicationTests using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 1966 (started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:58:35.966  INFO 1966 --- [main] c.e.demo.UserServiceApplicationTests     : No active profile set, falling back to default profiles: default
+2021-11-26 10:58:37.279  INFO 1966 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-26 10:58:37.347  INFO 1966 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
+2021-11-26 10:58:38.072  INFO 1966 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-26 10:58:38.316  INFO 1966 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-26 10:58:38.402  INFO 1966 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-26 10:58:38.474  INFO 1966 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-26 10:58:38.642  INFO 1966 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-26 10:58:38.810  INFO 1966 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-11-26 10:58:39.524  INFO 1966 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-26 10:58:39.534  INFO 1966 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-26 10:58:40.339  WARN 1966 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-26 10:58:40.844  INFO 1966 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2021-11-26 10:58:41.409  INFO 1966 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-11-26 10:58:41.477  INFO 1966 --- [main] c.e.demo.UserServiceApplicationTests     : Started UserServiceApplicationTests in 5.98 seconds (JVM running for 7.556)
+2021-11-26 10:58:41.868  INFO 1966 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-26 10:58:41.871  INFO 1966 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-11-26 10:58:41.873  WARN 1966 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2021-11-26 10:58:41.876 ERROR 1966 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-11-26 10:58:41.880  WARN 1966 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2021-11-26 10:58:41.881 ERROR 1966 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-11-26 10:58:41.881  WARN 1966 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2021-11-26 10:58:41.883  INFO 1966 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-26 10:58:41.893  INFO 1966 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-26 10:59:07.025  INFO 2085 --- [main] c.e.demo.UserServiceApplicationTests     : Starting UserServiceApplicationTests using Java 11.0.13 on nilay-HP-EliteBook-840-G3 with PID 2085 (started by nilay in /home/nilay/IdeaProjects/user-service)
+2021-11-26 10:59:07.027  INFO 2085 --- [main] c.e.demo.UserServiceApplicationTests     : No active profile set, falling back to default profiles: default
+2021-11-26 10:59:08.775  INFO 2085 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-26 10:59:08.855  INFO 2085 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 1 JPA repository interfaces.
+2021-11-26 10:59:09.808  INFO 2085 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-26 10:59:10.103  INFO 2085 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-26 10:59:10.227  INFO 2085 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-26 10:59:10.315  INFO 2085 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-26 10:59:10.498  INFO 2085 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-26 10:59:10.700  INFO 2085 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-11-26 10:59:11.812  INFO 2085 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-26 10:59:11.830  INFO 2085 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-26 10:59:12.804  WARN 2085 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-26 10:59:13.400  INFO 2085 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2021-11-26 10:59:14.095  INFO 2085 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-11-26 10:59:14.184  INFO 2085 --- [main] c.e.demo.UserServiceApplicationTests     : Started UserServiceApplicationTests in 7.642 seconds (JVM running for 9.378)
+2021-11-26 10:59:14.684  INFO 2085 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-26 10:59:14.686  INFO 2085 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-11-26 10:59:14.689  WARN 2085 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2021-11-26 10:59:14.691 ERROR 2085 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-11-26 10:59:14.696  WARN 2085 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2021-11-26 10:59:14.697 ERROR 2085 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-11-26 10:59:14.698  WARN 2085 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2021-11-26 10:59:14.704  INFO 2085 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-26 10:59:14.730  INFO 2085 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
