@@ -9,11 +9,11 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -39,8 +39,30 @@ public class UserController {
     {
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         UserDto userDto=modelMapper.map(userRequestModel,UserDto.class);
-        userDto.setUniqueId(UUID.randomUUID().toString());
+        String str[]=UUID.randomUUID().toString().split("-");
+        userDto.setUniqueId(str[0]);
         UserDto temp=userService.createUser(userDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(modelMapper.map(temp,UserResponseModel.class));
+    }
+
+    @GetMapping("/users")
+    public ResponseEntity<List<UserResponseModel>> displayUsers()
+    {
+        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+        List<UserDto> userDtoList=userService.displayAllUser();
+        List<UserResponseModel> userResponseModelList=new ArrayList<>();
+        Iterator<UserDto> iterator=userDtoList.iterator();
+        while(iterator.hasNext())
+        {
+            userResponseModelList.add(modelMapper.map(iterator.next(),UserResponseModel.class));
+        }
+        return ResponseEntity.ok(userResponseModelList);
+    }
+
+    @GetMapping("/users/{uniqueId}")
+    public ResponseEntity<UserResponseModel> fetUserByUniqueId(@PathVariable("uniqueId") String uniqueId)
+    {
+        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+        return ResponseEntity.ok(modelMapper.map(userService.fetchUserByUniqueId(uniqueId),UserResponseModel.class));
     }
 }
