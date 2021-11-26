@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.dao.UserDao;
 import com.example.demo.dto.UserDto;
+import com.example.demo.exception.UniqueIdNotFoundException;
 import com.example.demo.model.UserEntity;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
@@ -45,6 +46,11 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public UserDto fetchUserByUniqueId(String uniqueId) {
+        UserEntity userEntity=userDao.findByUniqueId(uniqueId);
+        if (userEntity==null)
+        {
+            throw new UniqueIdNotFoundException("id not found");
+        }
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         return modelMapper.map(userDao.findByUniqueId(uniqueId),UserDto.class);
     }

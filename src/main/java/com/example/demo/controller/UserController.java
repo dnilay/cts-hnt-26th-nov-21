@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.UserDto;
+import com.example.demo.model.UserEntity;
 import com.example.demo.service.UserService;
 import com.example.demo.ui.UserRequestModel;
 import com.example.demo.ui.UserResponseModel;
@@ -63,6 +64,7 @@ public class UserController {
     public ResponseEntity<UserResponseModel> fetUserByUniqueId(@PathVariable("uniqueId") String uniqueId)
     {
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+
         return ResponseEntity.ok(modelMapper.map(userService.fetchUserByUniqueId(uniqueId),UserResponseModel.class));
     }
 }
