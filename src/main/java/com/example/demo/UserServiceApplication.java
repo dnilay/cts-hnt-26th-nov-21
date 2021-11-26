@@ -27,10 +27,10 @@ public class UserServiceApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        userDao.save(new UserEntity(1, UUID.randomUUID().toString(),"John","Doe","john@email.com"));
+       /* userDao.save(new UserEntity(1, UUID.randomUUID().toString(),"John","Doe","john@email.com"));
         userDao.save(new UserEntity(2, UUID.randomUUID().toString(),"Marry","Public","marry@email.com"));
         userDao.save(new UserEntity(3, UUID.randomUUID().toString(),"Oak","Smith","oak@email.com"));
         userDao.save(new UserEntity(1, UUID.randomUUID().toString(),"Daniel","Doe","daniel@email.com"));
-
+*/
     }
 }

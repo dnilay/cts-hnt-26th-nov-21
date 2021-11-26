@@ -31,7 +31,7 @@ public class UserController {
     @GetMapping("/")
     public ResponseEntity<String> getStatus()
     {
-        return ResponseEntity.ok("user-ws is up and runing on port: "+environment.getProperty("local.server.port"));
+        return ResponseEntity.ok("user-ws is up and running on port: "+environment.getProperty("local.server.port"));
     }
 
     @PostMapping("/users")
