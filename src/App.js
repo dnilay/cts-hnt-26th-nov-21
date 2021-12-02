@@ -11,7 +11,7 @@ class App extends Component
     componentDidMount(){
         console.log('componentDidMount');
         const axios = require('axios');
-        axios.get('http://localhost:8081/todos/')
+        axios.get('http://18.140.250.91:8081/todos/')
             .then(res=>{
                 this.setState({todos : res.data});
             }).catch(error=>{
