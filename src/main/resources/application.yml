@@ -24,7 +24,4 @@ spring:
       enabled: true
       settings:
         web-allow-others: true
-  boot:
-    admin:
-      client:
-        url: http://localhost:9999
+
