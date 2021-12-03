@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import { Redirect } from 'react-router-dom'
 class Create extends Component {
-
+    state = {
+        redirect: false
+    }
   constructor(props){
     super(props);
     this.state = {product:{}};
@@ -26,12 +28,15 @@ class Create extends Component {
     axios.post('http://localhost:8081/products/',{productName:this.state.name,
               description:this.state.description,
               price:this.state.price})
-              .then(res=>{
-                    console.log(res.data);
-                })
+        .then(() => this.setState({ redirect: true }));
   }
 
   render() {
+      const { redirect } = this.state;
+
+      if (redirect) {
+          return <Redirect to='/'/>;
+      }
     return (
       <div>
         Enter Product Name:<input onChange={this.onNameChange}/><br/>

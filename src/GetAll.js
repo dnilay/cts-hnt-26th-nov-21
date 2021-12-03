@@ -10,7 +10,7 @@ class GetAll extends Component {
 
   componentDidMount(){
     const axios = require('axios');
-    axios.get('http://localhost:8080/api/products/')
+    axios.get('http://localhost:8081/products/')
     .then(res=>{
       console.log(res.data)
       this.setState({products:res.data});
