@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -25,6 +26,11 @@ public class SpringCloudFunctionDemoApplication {
                 Employee.builder().firstName("Marry").lastName("Public").email("marry@email.com").build(),
                 Employee.builder().firstName("Susan").lastName("Joseph").email("susan@email.com").build())
                 .collect(Collectors.toList());
+    }
+
+    @Bean
+    public Consumer<String> printMessage() {
+        return (input) -> System.out.println(input);
     }
 
     public static void main(String[] args) {
