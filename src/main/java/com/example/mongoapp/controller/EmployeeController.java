@@ -15,6 +15,12 @@ public class EmployeeController {
 
     private EmployeeService employeeService;
 
+    @GetMapping("/")
+    public ResponseEntity<?> getStatus()
+    {
+        return ResponseEntity.ok("employee-service is up");
+    }
+
     @Autowired
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
