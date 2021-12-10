@@ -1,0 +1,14 @@
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+server:
+    port: 5000
+spring:
+    data:
+        mongodb:
+            uri: mongodb+srv://user2:12345@cluster0.c6wul.mongodb.net/playground?retryWrites=true&w=majority
+    profiles:
+        active: local
