@@ -11,9 +11,13 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class EmployeeRepository {
 
-    @Autowired
+
     private DynamoDBMapper dynamoDBMapper;
 
+    @Autowired
+    public EmployeeRepository(DynamoDBMapper dynamoDBMapper) {
+        this.dynamoDBMapper = dynamoDBMapper;
+    }
 
     public Employee save(Employee employee) {
         dynamoDBMapper.save(employee);
